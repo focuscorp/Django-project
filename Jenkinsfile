@@ -62,6 +62,8 @@ pipeline {
                        sh 'cf --help'
                        sh 'cf login -a https://api.cf.us10.hana.ondemand.com/ -u nadim.mabrouk@focus-corporation.com -p 93407130Nm2021'
                        sh 'cf push my_app_'
+                       sh 'cf logs my_app_ --recent'
+
                       
                     } 
                } 
