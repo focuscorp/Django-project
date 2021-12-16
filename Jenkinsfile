@@ -12,7 +12,8 @@ pipeline {
                stash(name: 'compiled-results', includes: 'sources/*.py*') 
                stash(name: 'setUpPy', includes: 'setup.py*') 
                stash(name: 'pypirc', includes: '.pypirc') 
-               stash(name: 'procfile', includes: 'Procfile') 
+               stash(name: 'procfile', includes: 'Procfile')
+               stash(name: 'managePy', includes: 'manage.py')
           } 
        } 
  
@@ -45,7 +46,8 @@ pipeline {
                        unstash(name: 'setUpPy') 
                        unstash(name: 'pypirc') 
                        unstash(name: 'procfile') 
-                       //https://docs.python.org/3/distutils/builtdist.html 
+                       unstash(name: 'managePy')
+                       //https://docs.python.org/3/distutils/builtdist.html
                        sh 'cd sources'  
                        sh 'ls -l'
                        sh 'python3 setup.py bdist_dumb --format=zip'
