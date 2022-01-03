@@ -61,8 +61,8 @@ pipeline {
                        sh 'sudo apt-get install cf8-cli'
                        sh 'cf --help'
                        sh 'cf login -a https://api.cf.us10.hana.ondemand.com/ -u mohtadi.nasri@focus-corporation.com -p 93407130Nm2021'
-                       sh 'cf push my_app_ -b https://github.com/cloudfoundry/python-buildpack.git'
-                       sh 'cf logs my_app_ --recent'
+                       sh 'cf push my_app_django -b https://github.com/cloudfoundry/python-buildpack.git'
+                       sh 'cf logs my_app_django --recent'
 
                       
                     } 
