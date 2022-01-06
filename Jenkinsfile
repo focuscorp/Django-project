@@ -63,7 +63,7 @@ pipeline {
                        //sh 'cf login -a https://api.cf.us10.hana.ondemand.com/ -u mohtadi.nasri@focus-corporation.com -p 93407130Nm2021'
                        sh 'cf login -a https://api.cf.us10.hana.ondemand.com/ -u nadim.mabrouk@focus-corporation.com -p NADmab13446526='
                        sh 'cf create-route cfapps.us10.hana.ondemand.com --hostname my_app_django_'
-                       sh 'cf push my_app_django_ --hostname my_app_django_ -b https://github.com/cloudfoundry/python-buildpack.git'
+                       sh 'cf push my_app_django_  -b https://github.com/cloudfoundry/python-buildpack.git'
                                    
                     } 
                } 
