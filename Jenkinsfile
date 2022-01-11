@@ -59,7 +59,12 @@ pipeline {
                        sh 'echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list'
                        sh 'sudo apt-get update'
                        sh 'sudo apt-get install cf8-cli'
-                       sh 'sudo apt-get install python3-django'
+                       //sh 'sudo apt-get install python3-django'
+
+                       sh 'sudo apt-get install python3-pip'
+                       sh 'pip3 install Django'
+
+
 
                        sh 'cf --help'
                        //sh 'cf login -a https://api.cf.us10.hana.ondemand.com/ -u mohtadi.nasri@focus-corporation.com -p 93407130Nm2021'
